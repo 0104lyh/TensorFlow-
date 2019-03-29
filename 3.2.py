@@ -12,5 +12,6 @@ y=tf.matmul(a,w2)
 #用会话计算结果
 with tf.Session() as sess:
 	init_op = tf.global_variables_initializer()
+	#这里的这句话的意思是对所有变量的初始化（赋初值）
 	sess.run(init_op)
 	print("y in 3.2.py is:\n",sess.run(y))
