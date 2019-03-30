@@ -5,7 +5,7 @@ import tensorflow as tf
 x = tf.placeholder(tf.float32,shape=(1,2))
 w1=tf.Variable(tf.random_normal([2,3],stddev=1,seed=1))
 w2=tf.Variable(tf.random_normal([3,1],stddev=1,seed=1))
-
+#自己曾经在tf.random_normal后面这个[2,3]这里出过报错，原因后来发现是我写错了下面的[3,1]这个的意思是一个两行三列的矩阵，矩阵相乘行列要对应，不然就会出错。
 
 #定义前项传播过程
 a = tf.matmul(x,w1)
