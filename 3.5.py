@@ -4,6 +4,7 @@ import tensorflow as tf
 #定义输入和参数
 #用placeholder定义输入（sess.run()喂多组数据）
 x = tf.placeholder(tf.float32,shape=(None,2))
+#这里的shape后面写None的原因是，在后面不知道要输入多少组数据，但是第二个2是因为我们知道要输入的是两个'条件'
 w1 = tf.Variable(tf.random_normal([2,3],stddev=1,seed=1))
 w2 = tf.Variable(tf.random_normal([3,1],stddev=1,seed=1))
 
